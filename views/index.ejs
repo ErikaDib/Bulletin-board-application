@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title></title>
+</head>
+
+<body>
+    <h1>message board</h1>
+    
+    <ul>
+        <% todolist.forEach(function(todo, index) { %>
+            <li><a href="/index/delete/<%= index %>"></a> <%= todo %></li>
+        <% }); %>
+        </ul>
+    
+    <form action="index/add" method="post">
+        <h4>Enter name</h4>
+    <input class="input1" name="newtodo" id="newtodo" type="text">
+        <h4>Enter Title</h4>
+     <input name="newtodo" id="newtodo" type="text">
+        <h4>Enter Message</h4>
+     <input name="newtodo" id="newtodo" type="text">
+     <input type="submit" onClick="getValues" value="Submit">
+    <script src="../app.js"></script>
+    </form>
+</body>
+</html>
