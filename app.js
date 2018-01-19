@@ -53,6 +53,13 @@ var keyValuePair="name: "+word[0]+", "+ "title: " + word[1]+", "+"message: "+wor
 /* Deletes an item from the to do list */
 .get('/index/delete/:id', function(req, res) {
     if (req.params.id != '') {
+        fs.truncate('board.json',0,function(){
+            
+            console.log('done')
+                                             
+                                             
+                                             
+                                             });
         req.session.todolist.splice(req.params.id, 1);
     }
     res.redirect('/index');

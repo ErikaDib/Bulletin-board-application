@@ -3,28 +3,39 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
+ 
+
     <title></title>
 </head>
 
 <body>
-    <h1>message board</h1>
+    <h1 id="title">message board</h1>
     
     <ul>
         <% todolist.forEach(function(todo, index) { %>
-            <li><a href="/index/delete/<%= index %>"></a> <%= todo %></li>
+            <div class="alert alert-dark" role="alert">
+                
+            <li id="messages"><a href="/index/delete/<%= index %>">☁</a><%= todo %></li>
+                
+        </div>
         <% }); %>
         </ul>
+   
     
+    <div id="around">
     <form action="index/add" method="post">
         <h4>Enter name</h4>
     <input class="input1" name="newtodo" id="newtodo" type="text">
         <h4>Enter Title</h4>
      <input name="newtodo" id="newtodo" type="text">
         <h4>Enter Message</h4>
-     <input name="newtodo" id="newtodo" type="text">
-     <input type="submit" onClick="getValues" value="Submit">
+        <textarea class="box" name="newtodo" id="newtodo" type="text"></textarea>
+        <br>
+     <input class="button btn btn-primary" type="submit" onClick="getValues" value="Submit">
     <script src="../app.js"></script>
     </form>
+        </div>
 </body>
 </html>

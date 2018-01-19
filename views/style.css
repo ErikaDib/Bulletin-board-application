@@ -1,7 +1,31 @@
 
 body{
-    background-color: steelblue;
+    background-color: black;
 }
 form{
     display:block;
+}
+h4,h1,li{
+    color:white;
+}
+#title{
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+#messages{
+    text-align: center;
+}
+.box{
+     height:200px;
+   
+}
+.button{
+    margin-top: 10px;
+    float:left;
+    
+}
+#around{
+    
 }
